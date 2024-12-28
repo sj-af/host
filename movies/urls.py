@@ -23,7 +23,7 @@ urlpatterns = [
     path('list/<pk>', views.list,name='list'),
     path('delete/<pk>', views.delete,name='delete'),
 
-    path('', views.list,name='list')
+    path('', views.create,name='create')
     
     
 ]
