@@ -1,0 +1,26 @@
+{%extends 'blank_layout.html'%}
+{%block content%}
+<p>create user</p>
+<form action="" method="POST">
+    {%csrf_token%}
+    username<input type="text" name="uname">
+    password<input type="text" name="pword">
+<input type="submit" value="submit" name="submit">
+</form>
+<p>
+    {%if user%}
+    new user created{{user.username}}
+    {%endif%}
+</p>
+
+<p>
+    {%if error_message %}
+    error occured{{error_message}}
+    {%endif%}
+</p>
+
+
+
+
+
+{%endblock content%}
