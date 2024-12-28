@@ -74,11 +74,14 @@ WSGI_APPLICATION = 'movie_manager.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',  # Use MySQL backend for MariaDB
+        'NAME': 'mydatabase',                  # Name of the database you created
+        'USER': 'sj',                      # Your MariaDB username
+        'PASSWORD': '1234',              # Your MariaDB password
+        'HOST': 'localhost',                   # Use 'localhost' if the database is on the same machine
+        'PORT': '3306',                        # Default MariaDB port is 3306
     }
 }
 
